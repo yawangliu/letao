@@ -6,6 +6,9 @@ body {
   background-color: #fff;
   font-size: 14px;
 }
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
 }
@@ -51,7 +54,6 @@ ul {
 }
 .mycontent .brand .title {
   width: 100%;
-  vertical-align: top;
 }
 .mycontent .brand .list {
   width: 100%;

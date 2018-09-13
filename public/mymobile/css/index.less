@@ -1,0 +1,59 @@
+.mycontent{
+    position: absolute;
+    top: 44px;
+    bottom: 51px;
+    width: 100%;
+    background-color: #f5f5f5;
+    .my_left{
+        position: relative;
+        width: 80px;
+        float: left;
+        height: 100%;
+        .link{
+            width: 100%;
+            background-color: #fff;
+            a{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-right: 1px solid #f5f5f5;
+                border-bottom: 1px solid #f5f5f5;
+                &.active{
+                    background-color: #f5f5f5;
+                    border-right: transparent;
+                }
+            }
+        }
+    }
+    .my_right{
+        position: relative;
+        margin-left: 90px;
+        height: 100%;
+        .linkr{
+            width: 100%;
+            background-color: #fff;
+            ul{
+                width: 100%;
+                margin-top: 10px;
+                li{
+                    width: 33.333%;
+                    float: left;
+                    a{
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        img{
+                            width: 80%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.noresult{
+    padding: 20px;
+    color: red;
+}

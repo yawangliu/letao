@@ -7,12 +7,10 @@ $(function(){
        type:"get",
        url:" /category/queryTopCategory",
        success:function(res){
-            console.log(res);
             var result=template("category-first",{result:res.rows});
             $(".link").html(result);
             if(res.rows.length>0){
                 var id=res.rows[0].id;
-                console.log(id);
                 $(".link").find("a").eq(id-1).addClass("active").siblings().removeClass("active");
                 $.ajax({
                     type:"get",
@@ -37,7 +35,6 @@ $(function(){
             success:function(response){
                 var result=template("category-second",response);
                 $(".linkrt").html(result);
-                console.log(response);
             }
         })
    });

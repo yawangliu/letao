@@ -13,8 +13,8 @@ $(function(){
     })
     var keyArr=[];
     if(localStorage.getItem("keyword")){
-        keyArr=JSON.parse(localStorage.getItem("keyword"));
-        console.log(keyArr);
+         keyArr=JSON.parse(localStorage.getItem("keyword"));
+        console.dir(keyArr);
         var html=template("search-first",{result:keyArr});
         $(".mui-table-view").html(html);
     }
@@ -22,5 +22,6 @@ $(function(){
     $(".clear").on("click",function(){
         $(".mui-table-view").text("");
         localStorage.removeItem("keyword");
+        // keyArr.splice(0,keyArr.length);
     });
 })

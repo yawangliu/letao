@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/searchresult.css">
 	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="./js/searchresult.js"></script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav myheader">
@@ -46,20 +49,7 @@
             </div>
 		<div class="product">
 			<ul class="list mui-clearfix">
-				<li>
-					<a href="javascript:;">
-					<img src="./images/product.jpg" alt="">
-					<span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-					</span>
-					<p>
-						<span>¥560.00</span>
-						<span>¥888.00</span>
-					</p>
-					<button class="buy-now">立即购买</button>
-					</a>
-				</li>
-				<li>
+				<!-- <li>
 					<a href="javascript:;">
 					<img src="./images/product.jpg" alt="">
 					<span class="name">
@@ -97,9 +87,26 @@
 					</p>
 					<button class="buy-now">立即购买</button>
 					</a>
-				</li> 
+				</li>   -->
 			</ul>
 		</div>
 	</div>
+	<script id="searchresult-first" type="text/html">
+		<%for(var i=0;i<data.length;i++){%>
+		<li> 
+			<a href="javascript:;">
+			<img src="<%=data[i].pic[0].picAddr%>" alt="">
+			<span class="name">
+					<%=data[i].proName%>
+			</span>
+			<p>
+				<span>¥<%=data[i].price%></span>
+				<span>¥<%=data[i].oldPrice%></span>
+			</p>
+			<button class="buy-now">立即购买</button>
+			</a>
+		</li>
+	<%}%>
+	</script>
 </body>
 </html>

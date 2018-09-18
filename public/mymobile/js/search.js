@@ -22,6 +22,6 @@ $(function(){
     $(".clear").on("click",function(){
         $(".mui-table-view").text("");
         localStorage.removeItem("keyword");
-        // keyArr.splice(0,keyArr.length);
+        keyArr=[];
     });
 })

@@ -1,0 +1,59 @@
+.product-title{
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+.price{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    span{
+        &:first-of-type{
+            font-size: 20px;
+            color:red;
+        }
+        &:last-of-type{
+            font-size: 16px;
+            color: #ccc;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+    }
+}
+.size{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        border: 1px solid #ccc;
+        // background-color: orange;
+        margin-bottom: 10px;
+    }
+}
+.detail-num{
+    padding: 10px;
+}
+.shopcar{
+    width: 100%;
+    padding: 10px;
+    a{
+        display: inline-block;
+        width: 49%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        &:first-of-type{
+            background-color: orange;
+        }
+        &:last-of-type{
+            background-color: darkred;
+        }
+    }
+}
+.active{
+    background-color: orangered;
+}

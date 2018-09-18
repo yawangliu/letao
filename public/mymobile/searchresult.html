@@ -12,11 +12,12 @@
 	<script src="assets/zepto/zepto.min.js"></script>
 	<script src="assets/artTemplate/template-native.js"></script>
 	<script src="./js/searchresult.js"></script>
+	<script src="./js/common.js"></script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav myheader">
 		<h1 class="mui-title">乐淘云购</h1>
-		<a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
+		<a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
 	</header>
 	<nav class="mui-bar mui-bar-tab footer myfooter">
 		<a class="mui-tab-item mui-active" href="index.html">
@@ -39,7 +40,7 @@
 	<div class="mui-content mycontent"> 
 		<div>
 				<div class="mui-row filter">
-						<div class="mui-col-xs-6 myfilter">
+						<div class="mui-col-xs-6 myfilter pricebtn">
 							价格 
 							<span class="mui-icon mui-icon-arrowdown"></span> 
 						</div>
@@ -58,7 +59,7 @@
 	<script id="searchresult-first" type="text/html">
 		<%for(var i=0;i<data.length;i++){%>
 		<li> 
-			<a href="javascript:;">
+			<a href="detail.html?id=<%=data[i].id%>" class="detailBtn">
 			<img src="<%=data[i].pic[0].picAddr%>" alt="">
 			<span class="name">
 					<%=data[i].proName%>

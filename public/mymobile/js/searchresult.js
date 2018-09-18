@@ -2,22 +2,9 @@ $(function(){
     //截取url地址
     var page=1;
     var html="";
+    var that="";
     var aq=getparam(location.href,'keyword');
     console.log(aq);
-    function getparam(url,name){
-        var i=url.indexOf("?");
-        var dr=url.substr(i+1);
-        var arr=[];
-        arr=dr.split("&");
-        for(var i=0;i<arr.length;i++){
-            var dg=arr[i].split("=");
-            for(var i=0;i<dg.length;i++){
-                if(dg[0]==name){
-                    return dg[1];
-                }
-            }
-        }
-    }
   
    mui.init({
     pullRefresh : {
@@ -31,12 +18,16 @@ $(function(){
       }
     }
   });
+
+  var priceSort=1;
   function getData(){
-      var that=this;
+      if(!that){
+        that=this;
+      }
     $.ajax({
         url:" /product/queryProduct",
         type:"get",
-        data:{page:page++,pageSize:3,proName:aq},
+        data:{page:page++,pageSize:3,proName:aq,price:priceSort},
         success:function(response){
              console.log(response);
              if(response.data.length>0){
@@ -49,4 +40,12 @@ $(function(){
         }
     }) 
   }
+  
+  $(".pricebtn").on("tap",function(){
+      priceSort=priceSort==1?2:1;
+      html="";
+      page=1;
+      mui('.mycontent').pullRefresh().refresh(true);
+      getData();
+  });
 })
